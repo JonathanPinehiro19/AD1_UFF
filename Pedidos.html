@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canastrão Queijos</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Karla&family=Ubuntu&family=Verdana&family=Stoke&family=Lucida+Bright&family=Liberation&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <header>
+        <img src="imagens/CanastraoLogoTopo.png" alt="Logo Canastrão" class="imgLogo">
+        <address class="ender">
+            Av. Gorgonzola, 235<br>
+            Tel: (21) 91235-1235<br>
+            E-mail: contato@canastrao.com.br
+        </address>
+    </header>
+
+    <nav>
+        <ul class="menu">
+            <li><a href="Inicio.html">Início</a></li>
+            <li><a href="Queijos.html">Queijos</a></li>
+            <li><a href="Harmonizacao.html">Harmonização</a></li>
+            <li><a href="Pedidos.html">Pedidos</a></li>
+        </ul>
+    </nav>
+    <section>
+        <h3>Harmonização de Queijos e Vinhos</h3>
+
+        <div class="divCompras">
+            <h2>Compras</h2>
+            <fieldset class="fsEsq">
+                <legend>Identificação</legend>
+                <div class="divLinha">
+                    <label class="colPriCompras">Nome:</label>
+                    <input type="text" class="inpGrande">
+                </div>
+                <div class="divLinha">
+                    <label class="colPriCompras">E-mail:</label>
+                    <input type="email" class="inpGrande">
+                </div>
+                <div class="rightSelect">
+                    <fieldset class="radios">
+                        <legend>Genero:</legend>
+                        <input type="radio" name="" id="">Mas
+                        <input type="radio" name="" id="">Fem
+                        <input type="radio" name="" id="">Outro
+                    </fieldset>
+                    <fieldset class="nasc">
+                        <legend>Nascimento:</legend>
+                        <input type="number" class="numDD" min="1" max="31" placeholder="DD"> /
+                        <input type="number" class="numDD" min="1" max="12" placeholder="MM"> /
+                        <input type="number" class="numQD" min="1900" max="2025" placeholder="AAAA">
+                    </fieldset>
+                </div>
+                <div class="divLinha">
+                    <label class="colPriCompras">Endereço:</label>
+                    <textarea class="impEnder"></textarea>
+                </div>
+
+                <div class="divLinha">
+                    <label class="colPri">Telefone:</label>
+                    <input type="tel" class="impTelef">
+                </div>
+
+                <div class="divLinha">
+                    <label class="colPri">Celular:</label>
+                    <input type="tel" class="impTelef">
+                </div>
+
+            </fieldset>
+
+            <fieldset class="fsEsq">
+                <legend>Seleção de Produto e Pagamento</legend>
+                <div class="divLinha linhaProdSel">
+                    <select id="queijos">
+                        <option>-----</option>
+                        <optgroup label="Nacional">
+                            <option>Canastra (500g)</option>
+                            <option>Queijo Minas (400g)</option>
+                            <option>Queijo Coalho (500g)</option>
+                        </optgroup>
+                        <optgroup label="Internacional">
+                            <option>Gorgonzola (200g)</option>
+                            <option>Queijo Brie (200g)</option>
+                        </optgroup>
+                    </select>
+                    <button>Comprar</button>
+                </div>
+                <textarea class="listaCompras" readonly></textarea>
+                <fieldset class="cartao">
+                    <legend>Cartao</legend>
+                    <div class="divLinha">
+                        Bandeira:
+                        <input type="radio" name="" id="">Visa
+                        <input type="radio" name="" id="">Master
+                        <input type="radio" name="" id="">Elo
+                    </div>
+                    <div class="divLinha">
+                        <label class="colPri">Validade:</label>
+                        <input type="number" class="numDD" placeholder="MM"> /
+                        <input type="number" class="numQD" placeholder="AAAA">
+                    </div>
+                    <div class="divLinha">
+                        Número:   
+                        <input type="text" class="impNCC">
+                    </div>
+                </fieldset>
+                <div class="valor">
+                    Valor R$
+                    <input type="text" class="impNCC">
+                </div>
+            </fieldset>
+        </div>
+
+
+    </section>
+</body>
+
+</html>

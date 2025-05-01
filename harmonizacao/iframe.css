@@ -1,0 +1,22 @@
+body{
+}
+.caixa-queijo{    
+    float: inherit;
+    position: absolute;
+    z-index: 999;
+    margin-left: 100px;
+    text-align: center;
+    width: 300px;
+    height: auto;
+    border: #2255CC 2px solid;
+    background-color: #FFFFBB;
+    color: #3366BB;
+}
+img{
+    width: 120px;
+    height: auto;
+    
+}
+button{
+    margin-bottom: 10px;
+}
