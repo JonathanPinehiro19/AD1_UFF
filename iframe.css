@@ -4,13 +4,16 @@ body{
     float: inherit;
     position: absolute;
     z-index: 999;
-    margin-left: 100px;
+    margin-left: auto;
     text-align: center;
     width: 300px;
     height: auto;
     border: #2255CC 2px solid;
     background-color: #FFFFBB;
     color: #3366BB;
+}
+.conteudo{
+    padding: 10px;
 }
 img{
     width: 120px;

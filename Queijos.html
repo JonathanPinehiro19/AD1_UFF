@@ -9,6 +9,7 @@
         href="https://fonts.googleapis.com/css2?family=Karla&family=Ubuntu&family=Verdana&family=Stoke&family=Lucida+Bright&family=Liberation&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="estilo.css">
+    <script src="index.js"></script>
 </head>
 
 <body>
@@ -33,52 +34,41 @@
         <h3>Harmonização de Queijos e Vinhos</h3>
         <table>
             <thead>
-                <tr>
-                    <th colspan="5">Queijos</th>
+                <tr class="cabecalho">
+                    <th colspan="3">Queijos</th>
                 </tr>
                 <tr>
                     <th>Procedência</th>
                     <th>Tipo</th>
-                    <th>Imagem</th>
-                    <th>Peso</th>
-                    <th>Preço</th>
+                    <th>Descrição</th>
+                        
+                    <!-- <th>Peso</th>
+                    <th>Preço</th> -->
                 </tr>
             </thead>
             <tbody class="tbody">
                 <tr>
                     <td style="color: rgb(65, 54, 24); background-color: rgb(188, 167, 126);" rowspan="3">Nacional</td>
-                    <td>Canastra</td>
-                    <td><img src="imagens/QueijoCanastra.jpg" alt="Queijo Canastra"></td>
-                    <td>500g</td>
-                    <td class="preco">R$70,00</td>
+                    <td onclick="showProduct(0)"><div class="product">Canastra</div></td>
+                    <th id="" class="iframe-area" rowspan="6">
+                        <img src="Imagens/vazio_150.png" alt="">
+                    </th>
                 </tr>
                 <tr>
-                    <td>Minas</td>
-                    <td><img src="imagens/QueijoMinas.jpg" alt="Queijo Minas"></td>
-                    <td>400g</td>
-                    <td class="preco">R$23,00</td>
+                    <td onclick="showProduct(1)"><div class="product">Minas</div></td>
                 </tr>
                 <tr>
-                    <td>Coalho</td>
-                    <td><img src="imagens/QueijoCoalho.jpg" alt="Queijo Coalho"></td>
-                    <td>500g</td>
-                    <td class="preco">R$40,00</td>
+                    <td onclick="showProduct(2)"><div class="product">Coalho</div></td>
                 </tr>
                 <tr>
-                    <td style="color: rgb(65, 54, 24); background-color: rgb(188, 167, 126);" rowspan="2">Internacional
-                    </td>
-                    <td>Gorgonzola</td>
-                    <td><img src="imagens/QueijoGorgonzola.jpg" alt="Queijo Gorgonzola"></td>
-                    <td>200g</td>
-                    <td class="preco">R$20,00</td>
+                    <td style="color: rgb(65, 54, 24); background-color: rgb(188, 167, 126);" rowspan="2">Internacional</td>
+                    <td onclick="showProduct(3)"><div class="product">Gorgonzola</div></td>
                 </tr>
                 <tr>
-                    <td>Brie</td>
-                    <td><img src="imagens/QueijoBrie.jpg" alt="Queijo Brie"></td>
-                    <td>200g</td>
-                    <td class="preco">R$30,00</td>
+                    <td onclick="showProduct(4)"><div class="product">Brie</div></td>
                 </tr>
             </tbody>
+            
         </table>
     </section>
 </body>

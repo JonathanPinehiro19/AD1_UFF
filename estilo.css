@@ -83,8 +83,12 @@ section h3 {
     margin-right: 5rem;
     margin-top: 15px;
 }
-
+.product{
+    cursor: pointer;
+}
 .ender {
+    
+    align-items: baseline;
     font-size: 14px;
     line-height: 140%;
     text-align: right;
@@ -150,10 +154,20 @@ th {
     font-size: 15px;
     border: 2px solid black;
 }
-
+th>h2{
+    
+    font-size: 20px;
+    color: #3366BB;
+}
+.iframe-area {
+    color: #3366BB;
+    text-align: center;
+    width: 100%;
+    background-color: #FFFFBB;
+}
 td {
     border: 2px solid black;
-    padding: 8px;
+    padding: 25px;
     text-align: left;
 }
 
