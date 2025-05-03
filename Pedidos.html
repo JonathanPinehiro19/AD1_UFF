@@ -9,6 +9,7 @@
         href="https://fonts.googleapis.com/css2?family=Karla&family=Ubuntu&family=Verdana&family=Stoke&family=Lucida+Bright&family=Liberation&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="estilo.css">
+    <script src="index.js"></script>
 </head>
 
 <body>
@@ -38,11 +39,11 @@
                 <legend>Identificação</legend>
                 <div class="divLinha">
                     <label class="colPriCompras">Nome:</label>
-                    <input type="text" class="inpGrande">
+                    <input type="text" class="impGrande">
                 </div>
                 <div class="divLinha">
                     <label class="colPriCompras">E-mail:</label>
-                    <input type="email" class="inpGrande">
+                    <input type="email" class="impGrande">
                 </div>
                 <div class="rightSelect">
                     <fieldset class="radios">
@@ -90,36 +91,46 @@
                             <option>Queijo Brie (200g)</option>
                         </optgroup>
                     </select>
-                    <button>Incluir</button>
+                    <button class="btn-incluir">Incluir</button>
                 </div>
                 <textarea class="listaCompras" readonly></textarea>
                 <fieldset class="cartao">
                     <legend>Cartao</legend>
-                    <div class="divLinha">
+                    <div class="divLinha-cartao">
                         Bandeira:
                         <input type="radio" name="" id="">Visa
                         <input type="radio" name="" id="">Master
                         <input type="radio" name="" id="">Elo
                     </div>
-                    <div class="divLinha">
-                        <label class="colPri">Validade:</label>
+                    <div class="divLinha-cartaoa">
+                        <label class="colPri-val">Validade:</label>                       
                         <input type="number" class="numDD" placeholder="MM"> /
-                        <input type="number" class="numQD" placeholder="AAAA">
+                        <input type="number" class="numQD" placeholder="AAAA">                   
                     </div>
-                    <div class="divLinha">
+                    <div class="divLinha-cartao">
                         Número:   
                         <input type="text" class="impNCC">
                     </div>
                 </fieldset>
-                <div class="valor">
+                <div style="align-items: flex-start; gap: 10rem; margin-top: 30px;">
+                <strong class="valor">
                     Valor R$
                     <input type="text" class="impNCC">
+                </strong>
+                <strong>
+                    CPF:
+                    <input onchange="alertCpf()" id="cpf-imp" type="text" class="impNCC">
+                </strong>
                 </div>
             </fieldset>
+            <div class="btn-comprar-limpar">
+            <button>Comprar</button>
+            <button>Limpar</button>
+            </div>
         </div>
 
 
     </section>
 </body>
-
+   
 </html>

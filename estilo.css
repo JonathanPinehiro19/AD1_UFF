@@ -83,11 +83,13 @@ section h3 {
     margin-right: 5rem;
     margin-top: 15px;
 }
-.product{
+
+.product {
     cursor: pointer;
 }
+
 .ender {
-    
+
     align-items: baseline;
     font-size: 14px;
     line-height: 140%;
@@ -97,7 +99,8 @@ section h3 {
     font-size: 14px;
     font-family: 'Karla', 'Verdana', 'Ubuntu', sans-serif;
 }
-.iframe{
+
+.iframe {
     position: absolute;
     z-index: 999;
 }
@@ -154,17 +157,20 @@ th {
     font-size: 15px;
     border: 2px solid black;
 }
-th>h2{
-    
+
+th>h2 {
+
     font-size: 20px;
     color: #3366BB;
 }
+
 .iframe-area {
     color: #3366BB;
     text-align: center;
     width: 100%;
     background-color: #FFFFBB;
 }
+
 td {
     border: 2px solid black;
     padding: 25px;
@@ -258,16 +264,17 @@ fieldset {
 }
 
 .nasc {
+    align-items: flex-start;
     margin-top: 10px;
     height: 35px;
-    width: 160px;
     border: 2px solid #aaa;
     padding: 10px;
     padding-top: 1px;
-    
+
 }
-.rightSelect{
-    
+
+.rightSelect {
+
     float: right;
 }
 
@@ -289,39 +296,65 @@ legend {
     margin: 0px;
 }
 
-.inpGrande {
+.impGrande {
+    border: #646464 1px solid;
+    border-radius: 5px;
     width: 380px;
+    height: 20px;
 }
 
 .impMedio {
     width: 80px;
+    height: 20px;
 }
 
 .impNCC {
+    border: #646464 1px solid;
+    border-radius: 5px;
     width: 130px;
+    height: 20px;
 }
 
 .impTelef {
+    border: #646464 1px solid;
+    border-radius: 5px;
     width: 90px;
+    height: 20px;
 }
 
 .impEnder {
+    border: #646464 1px solid;
+    border-radius: 5px;
     width: 180px;
     height: 50px;
 }
 
 
 .numDD {
-    width: 30px;
+    border: #646464 1px solid;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    width: 35px;
+    height: 20px;
 }
 
 .numQD {
+    border: #646464 1px solid;
+    border-radius: 5px;
+    margin-bottom: 5px;
     width: 50px;
+    height: 20px;
 }
 
 .divLinha {
-    
+
     width: 500px;
+    margin-bottom: 6px;
+}
+
+.divLinha-cartao {
+
+    width: 250px;
     margin-bottom: 6px;
 }
 
@@ -334,7 +367,16 @@ legend {
 .colPri {
     width: 90px;
     float: left;
-    display: block;
+    display: flex;
+}
+
+.colPri-val {
+    margin-right: 4px;
+    margin-top: 5px;
+    /* width: 90px; */
+    float: left;
+    display: flex;
+    align-items: center;
 }
 
 .colPriCompras {
@@ -349,7 +391,10 @@ legend {
     float: right;
     margin-top: 2px;
     margin-left: 10px;
+
 }
+
+.divLinha-cartaoa {}
 
 .colLabSelProd {
     width: 230px;
@@ -375,11 +420,17 @@ legend {
 }
 
 button {
+    color: #646464;
+    margin-left: 10px;
     padding: 5px 10px;
-    background-color: #ccc;
     border: 1px solid #999;
     cursor: pointer;
     border-radius: 5px;
+}
+
+.btn-comprar-limpar {
+    margin-top: 10px;
+    float: right;
 }
 
 button:hover {
@@ -389,17 +440,19 @@ button:hover {
 .divCompras>h2 {
     text-align: left;
 }
-.cartao{
-    
+
+.cartao {
+
     height: auto;
     width: 10px;
 }
 
-.cartao>.divLinha>input{
+.cartao>.divLinha>input {
     margin-left: 10px;
 }
-.valor{
-    margin: 0 0 0 20rem;
 
+.valor {
+    gap: 10px;
+    /* margin: 0 0 0 5rem; */
     float: right;
 }

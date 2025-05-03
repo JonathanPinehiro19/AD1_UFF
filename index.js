@@ -45,9 +45,9 @@ const queijos = [
     }
 ];
 
-function showProduct(qj){
-    
-document.querySelector(".iframe-area").innerHTML = `
+function showProduct(qj) {
+
+    document.querySelector(".iframe-area").innerHTML = `
     <h2>${queijos[qj].nome}</h2>
     <img src="Imagens/${queijos[qj].imagem}" alt="${queijos[qj].nome}" width="200" height="150">
     <p>Peso: ${queijos[qj].peso}g</p>
@@ -55,7 +55,46 @@ document.querySelector(".iframe-area").innerHTML = `
     <p>Preço:</p><strong style="color: red;">R$ ${queijos[qj].preco},00</strong>
     </div>
     `;
-return qj;
+    return qj;
 }
+function alertCpf() {
+    const cpfInput = document.getElementById("cpf-imp");
+    const cpf = cpfInput.value;
+    const cpfvetor = cpf.split("");
+    if (cpfvetor.length === 11 && cpfvetor[3] === "." || cpfvetor[7] === "." || cpfvetor[11] === "-") {
+        alert(`Insira apenas dígitos, caracter "." inválido!`);
+        cpfInput.value = "";
+    } else if (cpf.value === "12345678910") {
+        alert("Dígitos verificadores inválidos!");
+        cpfInput.value = "";
+    } else if (isNaN(cpf)) {
+        alert("CPF só pode ter números!");
+        cpfInput.value = "";
+    }
+    else if (cpf.length === 11) {
+
+    } else if (cpf.length != 11) {
+        alert("CPF tem que ter 11 dígitos!");
+        cpfInput.value = "";
+    } else if (cpfvetor[10] == primeiro_digito || cpfvetor[11] == segundo_digito) {
+        alert("CPF Válido");
+        cpfInput.value = "";
+    }
+    else {
+        alert("CPF Inválido");
+        cpfInput.value = "";
+    }
 
 
+}
+function calculaDV(num) {
+    var resto = 0, soma = 0;
+    for (i = 2; i < 11; i++) {
+        soma = soma + ((num % 10) * i);
+        num = parseInt(num / 10);
+    }
+    resto = (soma % 11);
+    return (resto > 1) ? (11 - resto) : 0;
+}
+primeiro_digito = calculaDV(identCPF)
+segundo_digito = calculaDV(identCPF * 10 + primeiro_digito)
