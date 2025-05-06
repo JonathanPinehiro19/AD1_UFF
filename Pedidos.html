@@ -5,9 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Canastrão Queijos</title>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Karla&family=Ubuntu&family=Verdana&family=Stoke&family=Lucida+Bright&family=Liberation&display=swap"
-        rel="stylesheet">
     <link rel="stylesheet" href="estilo.css">
     <script src="index.js"></script>
 </head>
@@ -79,21 +76,21 @@
             <fieldset class="fsEsq">
                 <legend>Seleção de Produto e Pagamento</legend>
                 <div class="divLinha linhaProdSel">
-                    <select id="queijos">
-                        <option>-----</option>
+                    <select  id="queijos_select">
+                        <option value="5">-----</option>
                         <optgroup label="Nacional">
-                            <option>Canastra (500g)</option>
-                            <option>Queijo Minas (400g)</option>
-                            <option>Queijo Coalho (500g)</option>
+                            <option value="0">Canastra (500g)</option>
+                            <option value="1">Queijo Minas (400g)</option>
+                            <option value="2">Queijo Coalho (500g)</option>
                         </optgroup>
                         <optgroup label="Internacional">
-                            <option>Gorgonzola (200g)</option>
-                            <option>Queijo Brie (200g)</option>
+                            <option value="3">Gorgonzola (200g)</option>
+                            <option value="4">Queijo Brie (200g)</option>
                         </optgroup>
                     </select>
-                    <button class="btn-incluir">Incluir</button>
+                    <button onclick="adquirirValor()" class="btn-incluir">Incluir</button>
                 </div>
-                <textarea class="listaCompras" readonly></textarea>
+                <textarea id="comboBox" class="listaCompras" readonly></textarea>
                 <fieldset class="cartao">
                     <legend>Cartao</legend>
                     <div class="divLinha-cartao">
@@ -103,19 +100,19 @@
                         <input type="radio" name="" id="">Elo
                     </div>
                     <div class="divLinha-cartaoa">
-                        <label class="colPri-val">Validade:</label>                       
+                        <label class="colPri-val">Validade:</label>
                         <input type="number" class="numDD" placeholder="MM"> /
-                        <input type="number" class="numQD" placeholder="AAAA">                   
+                        <input type="number" class="numQD" placeholder="AAAA">
                     </div>
                     <div class="divLinha-cartao">
-                        Número:   
+                        Número:
                         <input type="text" class="impNCC">
                     </div>
                 </fieldset>
                 <div style="align-items: flex-start; gap: 10rem; margin-top: 30px;">
                 <strong class="valor">
                     Valor R$
-                    <input type="text" class="impNCC">
+                    <input id="valorArea" type="text" class="impNCC">
                 </strong>
                 <strong>
                     CPF:
@@ -132,5 +129,5 @@
 
     </section>
 </body>
-   
+
 </html>

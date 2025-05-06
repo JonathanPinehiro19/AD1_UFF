@@ -96,5 +96,28 @@ function calculaDV(num) {
     resto = (soma % 11);
     return (resto > 1) ? (11 - resto) : 0;
 }
-primeiro_digito = calculaDV(identCPF)
-segundo_digito = calculaDV(identCPF * 10 + primeiro_digito)
+
+
+function adquirirValor() {
+    const selectElement = document.getElementById("queijos_select");
+    const selectedValue = selectElement.value;
+    const selectedText = selectElement.options[selectElement.selectedIndex].text;
+    const productBox = document.getElementById("comboBox");
+    const valorBox = document.getElementById("valorArea");
+
+    console.log("Valor selecionado:", selectedValue);
+    console.log("Texto selecionado:", selectedText);
+
+    if (selectedValue === "5") {
+        alert("Nunhum produto selecionado!");
+        return;
+    }
+
+    productBox.innerHTML += `${selectedText}\n`;
+
+    const valorAtual = parseFloat(valorBox.value) || 0;
+    valorBox.value += `${(queijos[selectedValue].preco)}\n`;
+    const novoValor = valorAtual + queijos[selectedValue].preco;
+    valorBox.value = novoValor.toFixed(2);
+   
+}
